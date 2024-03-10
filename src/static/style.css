@@ -46,18 +46,98 @@ t {
   font-weight: 700;
 }
 
-.hero:hover > t {
-  font-size: 5vw;
-}
-
 .content {
+  box-shadow: 25px;
+  box-shadow: black inset 0px 0px 60px 60px ;
   color: white;
   padding: 150px;
   width: 100%;
   height: 100%;
+  background: linear-gradient(-45deg, #0e274a, #003053, #005aae, #166691);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
 }
 
 @keyframes strike{
   0%   { width : 0; }
   100% { width: 100%; }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#nav {
+  text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  text-decoration: none;
+  position: fixed;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 0px 0px 15px 0px;
+  z-index: 999999999;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#about {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.branding {
+  border: 2px solid white;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 15px;
+}
+
+.teamMembers {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  gap: 25px;
+}
+
+.memberCard {
+  padding: 25px;
+  border-radius: 15px;
+  background-color: black;
+  width: calc(335px + 35px);
+  display: inline-block;
+  margin-left: 15px;
+  margin-right: 15px;
+  min-height: 450px;
+  text-align: center;
+  box-shadow: white 0px 0px 5px 5px;
+}
+
+.memberCard > img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.memberCard > name {
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
