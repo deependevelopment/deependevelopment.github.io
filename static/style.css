@@ -79,13 +79,13 @@ t {
   padding: 15px;
   display: flex;
   gap: 15px;
+  width: 100%;
   text-decoration: none;
   position: fixed;
   border-bottom: 2px solid white;
   border-right: 2px solid white;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border-radius: 0px 0px 15px 0px;
   z-index: 99999;
 }
 
@@ -105,10 +105,8 @@ a {
 }
 
 .branding {
-  border: 2px solid white;
-  padding-left: 7px;
-  padding-right: 7px;
-  border-radius: 15px;
+  border-right: solid 2px white;
+  padding-right: 15px
 }
 
 .teamMembers {

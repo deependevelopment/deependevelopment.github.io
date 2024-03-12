@@ -44,3 +44,13 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("progBar").style.width = scrolled + "%";
 }
+
+window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
+    const portrait = e.matches;
+
+    if (portrait) {
+        alert('Landscape works best on most devices - Try it out!');
+    } else {
+        return;
+    }
+});
