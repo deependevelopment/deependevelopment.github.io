@@ -15,7 +15,7 @@ body {
 }
 
 body {
-  background: rgb(8,31,72);
+  background: #081f48;
   background: linear-gradient(180deg, rgba(8,31,72,1) 0%, rgba(0,0,0,0) 100%);
   height: 100%;
   width: 100%;
