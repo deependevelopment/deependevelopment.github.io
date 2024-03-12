@@ -83,7 +83,6 @@ t {
   text-decoration: none;
   position: fixed;
   border-bottom: 2px solid white;
-  border-right: 2px solid white;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   z-index: 99999;
