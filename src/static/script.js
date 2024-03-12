@@ -34,4 +34,13 @@ function replaceTtext() {
     }, 230)
 }
 replaceTtext()
-setInterval(replaceTtext, 800);
+setInterval(replaceTtext, 800)
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("progBar").style.width = scrolled + "%";
+}
