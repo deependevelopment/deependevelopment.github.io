@@ -82,6 +82,8 @@ t {
   width: 100%;
   text-decoration: none;
   position: fixed;
+  background-color: rgba(0, 0, 0, 0.67);
+  min-height: 10px;
   border-bottom: 2px solid white;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
@@ -95,7 +97,7 @@ a {
 
 #about {
   padding: 150px;
-  box-shadow: black inset 0px 0px 60px 60px ;
+  box-shadow: black inset 0px 0px 20px 20px ;
   background: linear-gradient(-45deg, #0e274a, #003053, #005aae, #166691);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -190,7 +192,7 @@ a {
   --c2: dodgerblue;
   --c3: black;
   --bg: var(--c3);
-  --d: 4000ms;
+  --d: 10s;
   --e: cubic-bezier(0.76, 0, 0.24, 1);
   
   background-color: var(--bg);
@@ -206,23 +208,7 @@ a {
     calc(var(--p) *  1) calc(var(--p) * -1), 
     calc(var(--p) * -1) calc(var(--p) *  0);
   animation: 
-    color var(--d) var(--e) infinite,
     position var(--d) var(--e) infinite;
-}
-
-@keyframes color {
-  0%, 25% {
-    --bg: var(--c3);
-  }
-  26%, 50% {
-    --bg: var(--c3);
-  }
-  51%, 75% {
-    --bg: var(--c3);
-  }
-  76%, 100% {
-    --bg: var(--c3);
-  }
 }
 
 @keyframes position {
