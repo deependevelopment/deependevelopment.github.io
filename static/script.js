@@ -45,12 +45,6 @@ function myFunction() {
   document.getElementById("progBar").style.width = scrolled + "%";
 }
 
-window.matchMedia("(orientation: portrait)").addEventListener("change", e => {
-    const portrait = e.matches;
-
-    if (portrait) {
-        alert('Landscape works best on most devices - Try it out!');
-    } else {
-        return;
-    }
+screen.orientation.addEventListener("change", function(e) {
+    alert('Landscape works best on most devices - Try it out!');
 });
