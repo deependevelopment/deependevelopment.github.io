@@ -5,22 +5,36 @@
   <meta charset="utf-8">
   <meta name="viewport" width="device-width">
   <title>Deepen Development</title>
-  <meta property="og:title" content="Deepen Development"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="static/deependev-rounded.png"/>
-  <meta property="og:url" content="https://deependevelopment.github.io/website"/>
-  <meta property="og:description" content="Hi, we're Deepen Development; a team of coders, designers and advertisers."/>
+  <meta property="og:title" content="Deepen Development" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="static/deependev-rounded.png" />
+  <meta property="og:url" content="https://deependevelopment.github.io/website" />
+  <meta property="og:description"
+    content="Hi, we're Deepen Development; a team of coders, designers and advertisers." />
   <link rel="icon" type="image/x-icon" href="static/deependev-rounded.png">
   <meta name="theme-color" content="#081f48">
-  <link href="static/style.css" rel="stylesheet" type="text/css"/>
+  <link href="static/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="static/w3.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <script type="text/javascript" src="dat.gui.min.js"></script>
+
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-105392568-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <script async src='https://www.google-analytics.com/analytics.js'></script>
 </head>
 
 <body>
+  <canvas></canvas>
   <div id="progBar">
   </div>
   <div id="nav">
@@ -35,80 +49,83 @@
       <t id="heroTitle">We develop to <span id="titleChangeText">Reach</span>.</t>
     </div>
   </section>
-  <div class="bg">
-    <div class="content">
-      <section id="about">
-        <h1 style="text-align: center; font-size: 48px; text-shadow: 0px 0px 3px white;">Hi, we're Deepen Development.
-        </h1>
-        <div class="teamMembers">
+  <div class="content">
+    <section id="about">
+      <h1 style="text-align: center; font-size: 48px; text-shadow: 0px 0px 3px white;">Hi, we're Deepen Development.
+      </h1>
+      <div class="teamMembers">
+        <br>
+        <br>
+        <div class=memberCard>
+          <name>Adelto</name>
+          <p>Co-Founder</p>
           <br>
           <br>
-          <div class=memberCard data-aos="fade-up">
-            <name>Adelto</name>
-            <p>Co-Founder</p>
-            <br>
-            <br>
-            <img src="static/adelto.png">
-          </div>
-          <div class=memberCard data-aos="fade-up">
-            <name>Anshister</name>
-            <p>Co-Founder</p>
-            <br>
-            <br>
-            <img src="static/anshister.jpeg">
-          </div>
-          <div class=memberCard data-aos="fade-up">
-            <name>Its_me</name>
-            <p>Social Adv. Manager</p>
-            <br>
-            <br>
-            <img src="static/its_me.png">
-          </div>
-          <div class=memberCard data-aos="fade-up">
-            <name>Mr.Spaghetti</name>
-            <p>Adv. Manager</p>
-            <br>
-            <br>
-            <img src="static/mr_spaghetti.png">
-          </div>
-          <div class=memberCard data-aos="fade-up">
-            <name>_Ibrahim_2310_</name>
-            <p>Manager</p>
-            <br>
-            <br>
-            <img src="static/ibrahim.jpeg">
-          </div>
+          <img src="static/adelto.png">
         </div>
-        <h1 style="font-weight: normal">We're a team of coders, designers and advertisers.<br>
-          We believe that to make a brand sell, the customer to understand more about it.<br>
+        <div class=memberCard>
+          <name>Anshister</name>
+          <p>Co-Founder</p>
           <br>
-          That's what made us make websites. We realised people need support, because in todays market, making yourself
-          sell is harder then it looks.<br>
-          Now, making websites isn't all we offer -
-        </h1>
-      </section>
-      <section id="services">
-        <div id="servicesContent">
-          <h1 data-aos="zoom-out-right"><b>Discord Bot Development</b>
-            <p>
-              Fun bot - $16<br>
+          <br>
+          <img src="static/anshister.jpeg">
+        </div>
+        <div class=memberCard>
+          <name>Its_me</name>
+          <p>Human Resources</p>
+          <br>
+          <br>
+          <img src="static/its_me.png">
+        </div>
+        <div class=memberCard>
+          <name>Mr.Spaghetti</name>
+          <p>Adv. Manager</p>
+          <br>
+          <br>
+          <img src="static/mr_spaghetti.png">
+        </div>
+        <div class=memberCard>
+          <name>_Ibrahim_2310_</name>
+          <p>Manager</p>
+          <br>
+          <br>
+          <img src="static/ibrahim.jpeg">
+        </div>
+      </div>
+      <h1 style="font-weight: normal">We're a team of coders, designers and advertisers.<br>
+        We believe that to make a brand sell, the customer to understand more about it.<br>
+        <br>
+        That's what made us make websites. We realised people need support, because in todays market, making yourself
+        sell is harder then it looks.<br>
+        Now, making websites isn't all we offer -
+      </h1>
+    </section>
+    <section id="services">
+      <div id="servicesContent">
+        <h1 data-aos="zoom-out-right"><b>Discord Bot Development</b>
+          <p>
+            Revamping...<br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <!-- Fun bot - $16<br>
               Mod bot - $17<br>
               Combined bot - $16 to $26<br>
-              Custom bot - $6 / 5 commands<br>(approx. 50 commands in one custom bot)
-            </p>
-          </h1>
-          <h1 data-aos="zoom-out-left"><b>Web Development</b>
-            <p>
-              Coming soon<br>
-              <br>
-              <br>
-              <br>
-              <br>
-            </p>
-          </h1>
-        </div>
-      </section>
-    </div>
+              Custom bot - $6 / 5 commands<br>(approx. 50 commands in one custom bot) -->
+          </p>
+        </h1>
+        <h1 data-aos="zoom-out-left"><b>Web Development</b>
+          <p>
+            Coming soon<br>
+            <br>
+            <br>
+            <br>
+            <br>
+          </p>
+        </h1>
+      </div>
+    </section>
   </div>
   <section class="footer" id="footer">
     <h1>We'd love to chat.</h1>
