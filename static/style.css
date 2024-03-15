@@ -15,8 +15,6 @@ body {
 }
 
 body {
-  /* background: #081f48;
-  background: linear-gradient(180deg, #081f48 0%, rgba(0,0,0,0) 100%); */
   transition: background 800ms;
   height: 100%;
   width: 100%;
