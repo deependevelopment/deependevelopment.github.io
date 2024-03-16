@@ -73,6 +73,8 @@ gsap.from("#about", {
 
 'use strict';
 
+let fluidBgColor = { r: 0, g: 0, b: 0 };
+
 const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
@@ -80,7 +82,7 @@ let config = {
     SIM_RESOLUTION: 256,
     DYE_RESOLUTION: 1024,
     CAPTURE_RESOLUTION: 2048,
-    DENSITY_DISSIPATION: 1,
+    DENSITY_DISSIPATION: 6,
     VELOCITY_DISSIPATION: 2,
     PRESSURE: 0.8,
     PRESSURE_ITERATIONS: 125,
@@ -91,7 +93,7 @@ let config = {
     COLORFUL: true,
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
-    BACK_COLOR: { r: 0, g: 0, b: 0 },
+    BACK_COLOR: fluidBgColor,
     TRANSPARENT: true,
     BLOOM: false,
     BLOOM_ITERATIONS: 8,
@@ -1583,3 +1585,68 @@ function hashCode (s) {
     }
     return hash;
 };
+
+const hero = document.getElementById('hero');
+const adeltoCard = document.getElementById('adeltoCard');
+
+adeltoCard.addEventListener("mouseenter", (event) => {
+    hero.style.backgroundColor = adeltoCard.getAttribute("data-bgColor");
+    document.getElementById('content').style.background = adeltoCard.getAttribute("data-bgColor");
+    document.getElementById('about').style.boxShadow = `${adeltoCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+    document.getElementById('services').style.boxShadow = `${adeltoCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+}, false);
+
+adeltoCard.addEventListener("mouseleave", (event) => {
+    hero.style.backgroundColor = "black";
+    document.getElementById('content').style.background = "rgb(0, 0, 0)";
+    document.getElementById('about').style.boxShadow = "black inset 0px 0px 20px 20px";
+    document.getElementById('services').style.boxShadow = "black inset 0px 0px 20px 20px";
+}, false);
+
+const itsMeCard = document.getElementById('itsMeCard');
+
+itsMeCard.addEventListener("mouseenter", (event) => {
+    hero.style.backgroundColor = itsMeCard.getAttribute("data-bgColor");
+    document.getElementById('content').style.background = itsMeCard.getAttribute("data-bgColor");
+    document.getElementById('about').style.boxShadow = `${itsMeCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+    document.getElementById('services').style.boxShadow = `${itsMeCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+}, false);
+
+itsMeCard.addEventListener("mouseleave", (event) => {
+    hero.style.backgroundColor = "black";
+    document.getElementById('content').style.background = "rgb(0, 0, 0)";
+    document.getElementById('about').style.boxShadow = "black inset 0px 0px 20px 20px";
+    document.getElementById('services').style.boxShadow = "black inset 0px 0px 20px 20px";
+}, false);
+
+const mr_spaghettiCard = document.getElementById('mr_spaghettiCard');
+
+mr_spaghettiCard.addEventListener("mouseenter", (event) => {
+    hero.style.backgroundColor = mr_spaghettiCard.getAttribute("data-bgColor");
+    document.getElementById('content').style.background = mr_spaghettiCard.getAttribute("data-bgColor");
+    document.getElementById('about').style.boxShadow = `${mr_spaghettiCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+    document.getElementById('services').style.boxShadow = `${mr_spaghettiCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+}, false);
+
+mr_spaghettiCard.addEventListener("mouseleave", (event) => {
+    hero.style.backgroundColor = "black";
+    document.getElementById('content').style.background = "rgb(0, 0, 0)";
+    document.getElementById('about').style.boxShadow = "black inset 0px 0px 20px 20px";
+    document.getElementById('services').style.boxShadow = "black inset 0px 0px 20px 20px";
+}, false);
+
+const ibrahimCard = document.getElementById('ibrahimCard');
+
+ibrahimCard.addEventListener("mouseenter", (event) => {
+    hero.style.backgroundColor = ibrahimCard.getAttribute("data-bgColor");
+    document.getElementById('content').style.background = ibrahimCard.getAttribute("data-bgColor");
+    document.getElementById('about').style.boxShadow = `${ibrahimCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+    document.getElementById('services').style.boxShadow = `${ibrahimCard.getAttribute("data-bgColor")} inset 0px 0px 20px 20px`;
+}, false);
+
+ibrahimCard.addEventListener("mouseleave", (event) => {
+    hero.style.backgroundColor = "black";
+    document.getElementById('content').style.background = "rgb(0, 0, 0)";
+    document.getElementById('about').style.boxShadow = "black inset 0px 0px 20px 20px";
+    document.getElementById('services').style.boxShadow = "black inset 0px 0px 20px 20px";
+}, false);

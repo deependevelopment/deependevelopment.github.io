@@ -15,6 +15,7 @@ body {
 }
 
 body {
+  background-color: black;
   transition: background 800ms;
   height: 100%;
   width: 100%;
@@ -22,6 +23,7 @@ body {
   z-index: 2;
   left: 0px;
   top: 0px;
+  transition: background-color 400ms;
 }
 
 t {
@@ -40,15 +42,18 @@ t {
   height: 100vh;
   font-family: sans-serif;
   /* color: rgb(0, 60, 225); */
+  background-color: black;
   color: white;
   text-shadow: 0px 0px 30px rgb(0, 0, 0);
   font-weight: 700;
+  transition: background-color 400ms;
 }
 
 .content {
   background-color: transparent;
   /* color: white; */
   padding: 150px;
+  transition: background-color 400ms;
   /* width: 100%;
   height: 100%; */
 }
@@ -95,7 +100,8 @@ a {
 
 #about {
   padding: 150px;
-  box-shadow: black inset 0px 0px 20px 20px ;
+  box-shadow: black inset 0px 0px 20px 20px;
+  transition: box-shadow 400ms;
   background: linear-gradient(-45deg, #0e274a, #003053, #005aae, #166691);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -181,6 +187,7 @@ a {
   border-radius: 55px;
   width: 100%;
   box-shadow: black inset 0px 0px 10px 10px;
+  transition: box-shadow 400ms;
 	background-size: 400% 400%;
   backdrop-filter: blur(10000px);
   -webkit-backdrop-filter: blur(15px);
